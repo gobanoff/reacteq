@@ -221,8 +221,8 @@ function Calc() {
         {first}
         {action}
         {second}
-       <span>{sum}</span> 
-      </div>
+       
+      </div> <div className="rez1">{sum} </div>
     </>
   );
 }
