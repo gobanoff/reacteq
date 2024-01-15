@@ -221,7 +221,7 @@ function Calc() {
         {first}
         {action}
         {second}
-        {sum}
+       <span>{sum}</span> 
       </div>
     </>
   );
