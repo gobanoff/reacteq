@@ -216,13 +216,12 @@ function Calc() {
           </button>
         </div>
       </div>
-
       <div className="rez">
         {first}
         {action}
         {second}
-       
-      </div> <div className="rez1">{sum} </div>
+      </div>{" "}
+      <div className="rez1">{sum} </div>
     </>
   );
 }
