@@ -27,7 +27,7 @@ function Time() {
 
   return (
     <>
-      <div id="time" style={{ background: color }}></div>
+      <div id="time1" style={{ background: color }}></div>
 
       <p style={{ color: color }}>{date.toString()}</p>
     </>
