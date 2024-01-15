@@ -1,20 +1,24 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import './App.css';
 
 function App() {
   const [colorb, setColorb] = useState("");
+  const [count, setCount] = useState(0);
+
+ 
+
 
 const cl= () => {
-  setColorb('red');
+  setColorb('red'); setCount(count+1) ;
 }
 const cl1= () => {
-  setColorb('blue');
+  setColorb('blue');setCount(count+1) ;
 }
 const cl2= () => {
-  setColorb('green');
+  setColorb('green');setCount(count+1) ;
 }
 const cl3= () => {
-  setColorb('yellow');
+  setColorb('yellow');setCount(count+1) ;
 }
   return ( 
     <div className="App">
@@ -27,7 +31,12 @@ const cl3= () => {
           <button className="btn btn-primary"   onClick={cl3}
           >change</button>
           
+          <div className='box1'>{count}
           
+          
+          
+          
+          </div>
           
           
           </div>
