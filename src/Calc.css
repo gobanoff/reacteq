@@ -25,13 +25,13 @@
   padding-left: 100px;
   display: flex;
 }
-.rez {
+.rez {box-shadow: 12px 9px 17px 6px #ded9d9;
   width: 480px;
   height: 100px;
   background: yellow;
   margin-left: 100px;
   border-radius: 20px;
-  border: solid 2px;
+  border: solid 5px;
   margin-top: 50px;
   font-size: 50px;
   font-weight: 700;
