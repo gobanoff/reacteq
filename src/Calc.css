@@ -1,5 +1,4 @@
 .numb {
-  padding-left: 100px;
   padding-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -16,8 +15,25 @@
   border-radius: 10px;
 }
 .actions {
+  padding-left: 25px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.calc{display: flex;}
+.calc {
+  padding-left: 100px;
+  display: flex;
+}
+.rez {
+  width: 480px;
+  height: 100px;
+  background: yellow;
+  margin-left: 100px;
+  border-radius: 20px;
+  border: solid 2px;
+  margin-top: 50px;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 15px;
+}

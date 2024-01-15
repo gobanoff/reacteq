@@ -1,10 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Calc.css";
 
 function Calc() {
   const [first, setFirst] = useState("");
   const [second, setSecond] = useState("");
   const [action, setAction] = useState();
+  const [sum, setSum] = useState();
+
+const result =(e)=>{
+    const act = {
+        '+': (a,b)=> a + b,
+        '-': (a,b)=> a - b,
+        '*': (a,b)=> a * b,
+        '/': (a,b)=> a / b}
+
+        setSum (act[action](first,second));
+
+    }
 
   return (
     <>
@@ -33,8 +45,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first ==='0')return; setFirst(first + e.target.textContent);
+             } else{if (second ==='0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           9
@@ -42,8 +54,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first ==='0')return; setFirst(first + e.target.textContent);}
+            else {if (second ==='0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           4
@@ -51,8 +63,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first ==='0')return; setFirst(first + e.target.textContent);}
+            else{ if (second ==='0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           5
@@ -60,8 +72,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first ==='0')return; setFirst(first + e.target.textContent);}
+            else{ if (second ==='0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           6
@@ -69,8 +81,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first ==='0')return; setFirst(first + e.target.textContent);}
+            else{ if (second ==='0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           1
@@ -78,8 +90,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first === '0')return; setFirst(first + e.target.textContent);}
+            else{ if (second === '0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           2
@@ -87,8 +99,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first === '0')return; setFirst(first + e.target.textContent);}
+            else{ if (second === '0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           3
@@ -96,8 +108,8 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first === '0')return; setFirst(first + e.target.textContent);}
+            else{ if (second === '0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           0
@@ -105,34 +117,28 @@ function Calc() {
         <button
           className="btn btn-danger"
           onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
+            if (!action){if (first === '0')return; setFirst(first + e.target.textContent);}
+            else{ if (second === '0')return; setSecond((value) => value + e.target.textContent);}
           }}
         >
           .
         </button>
         <button
           className="btn btn-danger"
-          onClick={(e) => {
-            if (!action) setFirst(first + e.target.textContent);
-            else setSecond((value) => value + e.target.textContent);
-          }}
-        >
+          onClick={result}>
           =
         </button>
       </div>
       <div className="actions">
-      <button className="btn btn-danger" onClick={(e) => {if (first!="") setAction(e.target.textContent)}}>+</button>
-      <button className="btn btn-danger"onClick={(e) =>  {if (first!="")setAction(e.target.textContent)}}>-</button>
-      <button className="btn btn-danger"onClick={(e) =>  {if (first!="")setAction(e.target.textContent)}}>*</button>
-      <button className="btn btn-danger"onClick={(e) =>  {if (first!="")setAction(e.target.textContent)}}>/</button>
+      <button className="btn btn-danger" onClick={(e) => {if (first!=="")setAction(e.target.textContent)}}>+</button>
+      <button className="btn btn-danger" onClick={(e) => {if (first!=="")setAction(e.target.textContent)}}>-</button>
+      <button className="btn btn-danger" onClick={(e) => {if (first!=="")setAction(e.target.textContent)}}>*</button>
+      <button className="btn btn-danger" onClick={(e) => {if (first!=="")setAction(e.target.textContent)}}>/</button>
       </div>
       </div>
 
       <div className="rez">
-        {first}
-        <br />
-        {second}
+        {first}{action}{second}{sum}
       </div>
     </>
   );
