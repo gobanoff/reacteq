@@ -1,0 +1,23 @@
+.numb {
+  padding-left: 100px;
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 360px;
+  gap: 25px;
+}
+.btn-danger {
+  font-size: 45px;
+  font-weight: 700;
+  color: yellow;
+  background: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.calc{display: flex;}
