@@ -8,6 +8,7 @@ function Calc() {
   const [sum, setSum] = useState();
 
   const result = (e) => {
+    if(first ==='' || second ==='')return;
     const act = {
       "+": (a, b) => a + b,
       "-": (a, b) => a - b,
@@ -30,8 +31,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) setFirst(first + e.target.textContent);
-              else setSecond((value) => value + e.target.textContent);
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             7
@@ -40,8 +46,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) setFirst(first + e.target.textContent);
-              else setSecond((value) => value + e.target.textContent);
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             8
@@ -53,7 +64,7 @@ function Calc() {
                 if (first === "0") return;
                 setFirst(first + e.target.textContent);
               } else {
-                if (second === "0") return;
+                if (second === "0" || typeof sum !=='undefined') return;
                 setSecond((value) => value + e.target.textContent);
               }
             }}
@@ -63,13 +74,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             4
@@ -77,13 +88,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             5
@@ -91,13 +102,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             6
@@ -105,13 +116,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             1
@@ -119,13 +130,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             2
@@ -133,13 +144,13 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             3
@@ -147,20 +158,20 @@ function Calc() {
           <button
             className="btn btn-danger"
             onClick={(e) => {
-              if (!action) {
-                if (first === "0") return;
-                setFirst(first + e.target.textContent);
-              } else {
-                if (second === "0") return;
-                setSecond((value) => value + e.target.textContent);
-              }
+                if (!action) {
+                    if (first === "0") return;
+                    setFirst(first + e.target.textContent);
+                  } else {
+                    if (second === "0" || typeof sum !=='undefined') return;
+                    setSecond((value) => value + e.target.textContent);
+                  }
             }}
           >
             0
           </button>
           <button className="btn btn-danger" onClick={clear}>
-            {" "}
-            C{" "}
+           
+            C
           </button>
 
           <button className="btn btn-danger" onClick={result}>
