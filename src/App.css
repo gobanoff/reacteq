@@ -39,7 +39,7 @@
 .box {
   width: 700px;
   height: 700px;
-  background-color: aqua;
+  background-color: rgb(193, 205, 205);
   position: absolute;
   top: 200px;
   right: 200px;
@@ -47,8 +47,16 @@
 }
 .btn-success {
   background-color: rgb(13, 230, 13);
-  margin-top: 20px;
-  color: black;
   border: none;
+  color: black;
+}
+button { color: black;
+  margin-left: 10px;
+  margin-top: 20px;
   box-shadow: 2px 9px 19px 1px #989393;
+  border: none;
+}
+.btn-info {color: black;
+  background: red;
+  border: none;
 }

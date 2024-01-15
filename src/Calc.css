@@ -1,5 +1,5 @@
 .numb {
-  padding-top: 60px;
+  padding-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 360px;
@@ -15,8 +15,8 @@
   border-radius: 10px;
 }
 .actions {
-  padding-left: 25px;
-  padding-top: 60px;
+  padding-left: 45px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 25px;
