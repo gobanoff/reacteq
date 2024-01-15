@@ -37,8 +37,12 @@
   font-size: 50px;
   font-weight: 700;
   padding: 15px;
+  display: flex;
+  justify-content: center;
 }
 .rez1 {
+  display: flex;
+  justify-content: center;
   box-shadow: 12px 9px 17px 6px #ded9d9;
   width: 480px;
   height: 100px;
