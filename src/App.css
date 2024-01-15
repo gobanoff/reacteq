@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.box {
+  width: 700px;
+  height: 700px;
+  background-color: aqua;
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  border-radius: 50px;
+}
+.btn-success {
+  background-color: rgb(13, 230, 13);
+  margin-top: 20px;
+  color: black;
+  border: none;
+  box-shadow: 2px 9px 19px 1px #989393;
+}
