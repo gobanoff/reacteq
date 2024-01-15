@@ -12,11 +12,19 @@ const result =(e)=>{
         '+': (a,b)=> a + b,
         '-': (a,b)=> a - b,
         '*': (a,b)=> a * b,
-        '/': (a,b)=> a / b}
-
-        setSum (act[action](first,second));
+        '/': (a,b)=> a / b
+       }
+        setSum (act[action](+first,+second));
 
     }
+    const clear =(e)=>{
+        setFirst('');
+        setSecond('');
+        setAction();
+        setSum();
+        }
+
+
 
   return (
     <>
@@ -116,13 +124,8 @@ const result =(e)=>{
         </button>
         <button
           className="btn btn-danger"
-          onClick={(e) => {
-            if (!action){if (first === '0')return; setFirst(first + e.target.textContent);}
-            else{ if (second === '0')return; setSecond((value) => value + e.target.textContent);}
-          }}
-        >
-          .
-        </button>
+          onClick={clear} > C </button>
+
         <button
           className="btn btn-danger"
           onClick={result}>
