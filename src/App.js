@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
+const App = (props) => {
   const [colorb, setColorb] = useState("");
   const [count, setCount] = useState(0);
 
@@ -23,21 +23,22 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="box" style={{ background: colorb }}>
+      <div className="box" style={{ background: colorb }}><p>{count}</p>
         <button className="btn btn-success" onClick={cl}>
           change
         </button>
         <button className="btn btn-info" onClick={cl1}>
           change
-        </button>
+        </button> 
         <button className="btn btn-warning" onClick={cl2}>
           change
         </button>
         <button className="btn btn-primary" onClick={cl3}>
           change
         </button>
-
-        <div className="box1">{count}</div>
+       
+        <div className="box1">
+        {props.cnt}</div>
       </div>
     </div>
   );
