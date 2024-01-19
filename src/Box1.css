@@ -1,0 +1,21 @@
+.shot {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 370px;
+  height: 370px;
+  background-color: rgb(2, 22, 16);
+  margin-left: 600px;
+  margin-bottom: 200px;
+  gap: 10px;
+}
+.sqr {
+  color: rgb(21, 2, 2);
+  text-align: center;
+  padding-top: 25px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(225, 232, 130);
+  font-size: 35px;
+  font-weight: 700;
+}
