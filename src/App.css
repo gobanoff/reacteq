@@ -39,14 +39,44 @@
 .box {
   width: 700px;
   height: 700px;
-  background-color: rgb(193, 205, 205);
+  background-color: rgb(224, 227, 227);
   position: absolute;
   top: 200px;
   right: 200px;
   border-radius: 50px;
 }
+.btn-warning {
+  background-color: rgb(237, 245, 11);
+  border: none;
+  color: black;
+}
+.btn-warning:hover {
+  background-color: rgb(58, 245, 1);
+  border: none;
+  color: black;
+}
 .btn-success {
   background-color: rgb(13, 230, 13);
+  border: none;
+  color: black;
+}
+.btn-success:hover {
+  background-color: rgb(245, 29, 1);
+  border: none;
+  color: black;
+}
+.btn-primary {
+  background-color: rgb(13, 20, 230);
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.btn-primary:hover {
+  background-color: rgb(241, 245, 1);
+  border: none;
+  color: black;
+}
+.btn-info:hover {
+  background-color: rgb(9, 35, 237);
   border: none;
   color: black;
 }

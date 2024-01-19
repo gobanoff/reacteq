@@ -14,7 +14,7 @@ const App = (props) => {
     setCount(count + 1);
   };
   const cl2 = () => {
-    setColorb("green");
+    setColorb("rgb(13, 230, 13)");
     setCount(count + 1);
   };
   const cl3 = () => {
