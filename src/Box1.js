@@ -1,15 +1,13 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Box1.css";
 
 function Box1() {
-
   const [board, setBoard] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
+  const [xnext, setXnext] = useState(true);
   const [color, setColor] = useState("red");
 
   const win = () => {
-   
-    setColor(getRandomColor());
+    setColor(getRandomColor1());
   };
 
   useEffect(() => {
@@ -18,19 +16,10 @@ function Box1() {
     return () => clearInterval(clock);
   }, []);
 
-  function getRandomColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+  function getRandomColor1() {
+    const colors = ["red", "blue", "rgb(13, 230, 13)", "rgb(255, 251, 19)"];
+    return colors[Math.floor(Math.random() * colors.length)];
   }
-
-
-
-
-
 
   const calculateWinner = (squares) => {
     const lines = [
@@ -65,9 +54,9 @@ function Box1() {
       return;
     }
 
-    newBoard[index] = xIsNext ? "X" : "O";
+    newBoard[index] = xnext ? "X" : "O";
     setBoard(newBoard);
-    setXIsNext(!xIsNext);
+    setXnext(!xnext);
   };
 
   const renderSquare = (index) => (
@@ -79,24 +68,28 @@ function Box1() {
   const winner = calculateWinner(board);
   const status = winner
     ? `Winner: ${winner}`
-    : `Next player: ${xIsNext ? "X" : "O"}`;
+    : `Next player: ${xnext ? "X" : "O"}`;
 
   return (
     <>
-      <h1 className="sht">Winner:  <span className="sht1"style={{ color: color }}>{winner}</span></h1>
+      <h1 className="sht">
+        Winner:{" "}
+        <span className="sht1" style={{ color: color }}>
+          {" "}
+          {winner}
+        </span>
+      </h1>
 
-      <div className="shot"> 
-     
-          {renderSquare(0)}
-          {renderSquare(1)}
-          {renderSquare(2)}
-          {renderSquare(3)}
-          {renderSquare(4)}
-          {renderSquare(5)}
-          {renderSquare(6)}
-          {renderSquare(7)}
-          {renderSquare(8)}
-      
+      <div className="shot">
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
       </div>
     </>
   );
