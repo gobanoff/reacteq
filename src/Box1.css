@@ -20,3 +20,12 @@
   font-size: 55px;
   font-weight: 700;
 }
+.sht {
+  position: absolute;
+  font-weight: 700;
+  left: 750px;
+  top: 170px;
+}
+.sht1 {
+  font-weight: 700;
+}

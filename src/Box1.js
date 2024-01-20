@@ -1,10 +1,36 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./Box1.css";
 
 function Box1() {
 
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
+  const [color, setColor] = useState("red");
+
+  const win = () => {
+   
+    setColor(getRandomColor());
+  };
+
+  useEffect(() => {
+    const clock = setInterval(() => win(), 1000);
+
+    return () => clearInterval(clock);
+  }, []);
+
+  function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+
+
+
+
 
   const calculateWinner = (squares) => {
     const lines = [
@@ -57,7 +83,7 @@ function Box1() {
 
   return (
     <>
-      <div className="sht">Winner:{winner}</div>
+      <h1 className="sht">Winner:  <span className="sht1"style={{ color: color }}>{winner}</span></h1>
 
       <div className="shot"> 
      
