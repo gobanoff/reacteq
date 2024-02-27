@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reacteq/static/css/main.577bbcc0.css",
+    "main.js": "/reacteq/static/js/main.a04fc3b9.js",
+    "index.html": "/reacteq/index.html",
+    "main.577bbcc0.css.map": "/reacteq/static/css/main.577bbcc0.css.map",
+    "main.a04fc3b9.js.map": "/reacteq/static/js/main.a04fc3b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.577bbcc0.css",
+    "static/js/main.a04fc3b9.js"
+  ]
+}
